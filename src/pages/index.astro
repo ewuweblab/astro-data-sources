@@ -9,27 +9,16 @@ import emojiHolidays from "../data/emojiHolidays.json";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Local Data</title>
+		<title>Get & Show Data on Astro</title>
 	</head>
 	<body>
 		
-		<h1>Local Data</h1>
-
-		<p>Get then display from local <code>.json</code>, <code>.md</code>, etc. files.</p>
+		<h1>Get & Show Data on Astro</h1>
 
 		<ul>
-
-			{ 
-				emojiHolidays.map( holiday => (
-			
-					<li>
-						{ holiday.emoji } { holiday.name } 
-					</li>
-					
-					)
-				)
-			}
-
+			<li><a href="internal">Internal Frontmatter</a></li>
+			<li><a href="local">Local Data</a></li>
+			<li><a href="external">External Data</a></li>
 		</ul>
 
 	</body>
