@@ -1,0 +1,34 @@
+---
+import emojiHolidays from "../data/emojiHolidays.json"; 
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Front Matter</title>
+	</head>
+	<body>
+		<h1>External Data</h1>
+
+		<p>Get data from hosted external source <a href="https://codepen.io/manikoth/pen/NWoXzpx.js">JSON file on CodePen</a> </p>
+
+		<ul>
+		
+			{ 
+				emojiHolidays.map( holiday => (
+			
+					<li>
+						{ holiday.emoji } { holiday.name }  
+					</li>
+					
+					)
+				)
+			}	
+
+		</ul>
+
+	</body>
+</html>

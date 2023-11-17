@@ -1,0 +1,36 @@
+---
+// import local data
+import emojiHolidays from "../data/emojiHolidays.json";  
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Local Data</title>
+	</head>
+	<body>
+		
+		<h1>Local JSON Data</h1>
+
+		<p>Get then display from local <code>.json</code>, <code>.md</code>, etc. files.</p>
+
+		<ul>
+
+			{ 
+				emojiHolidays.map( holiday => (
+			
+					<li>
+						{ holiday.emoji } { holiday.name } 
+					</li>
+					
+					)
+				)
+			}
+
+		</ul>
+
+	</body>
+</html>
