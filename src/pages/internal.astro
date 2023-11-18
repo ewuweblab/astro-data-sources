@@ -18,17 +18,15 @@ const emojiHolidays = [ "☘️", "🐰", "🎆",  "🎃", "🎄" ];
 		<p>Get data from directly from frontmatter in <code>.astro</code> files.</p>
 
 		<ul>
-		
-			{ 
-				emojiHolidays.map( holiday => (
 			
-					<li>
-						{ holiday } 
-					</li>
-					
-					)
+			{
+				emojiHolidays.map ( emoji => 
+				
+					<li> { emoji } </li>
+				
 				)
-			}	
+			
+			}
 
 		</ul>
 

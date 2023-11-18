@@ -1,6 +1,7 @@
-[   {
+[   
+    {
        "name" : "St. Patrick's Day",
-        "emoji" :  "☘️"
+       "emoji" :  "☘️"
     },
     {
         "name" : "Easter",
@@ -11,8 +12,8 @@
         "emoji" :  "🎆"
     },
     {
-    "name" : "Halloween",
-    "emoji" :  "🎃"
+        "name" : "Halloween",
+        "emoji" :  "🎃"
     },
     {
         "name" : "Christmas",

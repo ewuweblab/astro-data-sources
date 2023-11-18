@@ -1,5 +1,13 @@
 ---
-import emojiHolidays from "../data/emojiHolidays.json"; 
+// data source
+const dataSource = 'https://gist.githubusercontent.com/ewuweblab/b8c52837370e6e39b3603dea2d0f6a07/raw/ee24073bada30f1a99b1bdfde81e05d389eb120e/emojiHolidays.json';
+
+// fetch the data
+const response = await fetch( dataSource );
+
+// JSONIFY me!
+const emojiHolidays = await response.json();
+
 ---
 
 <html lang="en">
@@ -13,20 +21,18 @@ import emojiHolidays from "../data/emojiHolidays.json";
 	<body>
 		<h1>External Data</h1>
 
-		<p>Get data from hosted external source <a href="https://codepen.io/manikoth/pen/NWoXzpx.js">JSON file on CodePen</a> </p>
+		<p>Get data from hosted external source <a href="https://gist.githubusercontent.com/ewuweblab/b8c52837370e6e39b3603dea2d0f6a07/raw/ee24073bada30f1a99b1bdfde81e05d389eb120e/emojiHolidays.json">JSON files hosted on GitHub</a> </p>
 
 		<ul>
 		
-			{ 
-				emojiHolidays.map( holiday => (
-			
-					<li>
-						{ holiday.emoji } { holiday.name }  
-					</li>
-					
-					)
+			{
+				emojiHolidays.map( emoji => 
+
+					<li> { emoji.emoji } { emoji.name }</li>
+
 				)
-			}	
+			}
+		
 
 		</ul>
 

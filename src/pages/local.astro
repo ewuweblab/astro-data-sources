@@ -20,15 +20,13 @@ import emojiHolidays from "../data/emojiHolidays.json";
 		<ul>
 
 			{ 
-				emojiHolidays.map( holiday => (
-			
-					<li>
-						{ holiday.emoji } { holiday.name } 
-					</li>
-					
-					)
+				emojiHolidays.map ( emoji => 
+
+					<li> { emoji.emoji }  { emoji.name } </li>
+
 				)
 			}
+			
 
 		</ul>
 
